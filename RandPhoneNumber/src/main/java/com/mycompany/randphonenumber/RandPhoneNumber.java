@@ -4,7 +4,6 @@
 
 package com.mycompany.randphonenumber;
 
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ public class RandPhoneNumber {
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
         
-        System.out.print("type 'p' to generate a phone number. Type 'q' to quit");
+        System.out.print("type 'p' to generate a phone number. Type 'r' to roll the dice. Type 'q' to quit");
         
         while(true) {
             String input = scanner.nextLine();
@@ -38,16 +37,13 @@ public class RandPhoneNumber {
                     }
                 }
                 System.out.print("\n");
-            } else if (input.equalsIgnoreCase("q")) {
+            } else if (input.equalsIgnoreCase("r")) {
+                System.out.println(rand.nextInt(6) + 1);
+            }else if (input.equalsIgnoreCase("q")) {
                 break;
             }
         }
         
     }
-
     
 }
-    
-        
-
-
